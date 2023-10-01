@@ -124,6 +124,12 @@ public class Deque<Item> implements Iterable<Item> {
 
 
     // unit testing (required)
+
+    /**
+     * reference from flying pig
+     *
+     * @param args
+     */
     public static void main(String[] args) {
         Deque<String> dq = new Deque<>();
         for (int i = 0; i < 5; i++) {
@@ -142,5 +148,4 @@ public class Deque<Item> implements Iterable<Item> {
             System.out.println(dq.size());
         }
     }
-
 }
