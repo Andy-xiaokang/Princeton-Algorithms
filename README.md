@@ -32,3 +32,14 @@ optimization
 ```
 pay attention to when the initial node was deleted the node.prev is null, so node.prev.board will 
 throw a NullPointerExpection. so you need to handle this paticular situation.  
+## week5 kdtree
+这个不同条件下的递归实现起来有些难，直接参照的flyingpig的实现  
+巧妙运用helper 函数，这点在cs61A 里见过很多次
+在binary seach tree 的基础上加入维度，此例使用的是2d-tree, odd level use x-coordinate, !odd level use y-coordinate.    
+* problem1 ADT Node has these fields isOdd(determine use x key or y key), point, size, left, right, rect(every node(point) has a responding rectangle)  
+* problem2 `insert` method establish the tree. basic case and the node's attribute `isOdd` determines use which key to the direction of recursion  
+* problem3 `range` use the optimization when only go to left, when only go to right, when both seach left and right.
+* use field `dist` and `nearestPoint` store the nearestP so far, and use optimization, in which circumstances go left, in which circumstance go right or both.
+
+recursion! recursion!! recursion!!!  
+
